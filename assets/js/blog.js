@@ -2,19 +2,19 @@
   en: [
     { slug: "article-1", category: "SEO", title: "How to Structure an AI-Aware SEO Program" },
     { slug: "article-2", category: "Paid Media", title: "Building Google Ads Funnels That Protect Margin" },
-    { slug: "article-3", category: "Automation", title: "Marketing Automation Blueprints for B2B Teams" },
+    { slug: "article-3", category: "Automation", title: "Marketing Automation Blueprints for Growth Teams" },
     { slug: "article-4", category: "Strategy", title: "From Traffic to Revenue: Measurement Architecture" }
   ],
   fr: [
     { slug: "article-1", category: "SEO", title: "Structurer un programme SEO adapt\u00e9 \u00e0 l'IA" },
     { slug: "article-2", category: "M\u00e9dias payants", title: "Construire des funnels Google Ads rentables" },
-    { slug: "article-3", category: "Automatisation", title: "Plans d'automatisation marketing B2B" },
+    { slug: "article-3", category: "Automatisation", title: "Plans d'automatisation marketing pour \u00e9quipes de croissance" },
     { slug: "article-4", category: "Strat\u00e9gie", title: "Du trafic au revenu: architecture de mesure" }
   ],
   es: [
     { slug: "article-1", category: "SEO", title: "C\u00f3mo estructurar un programa SEO orientado a IA" },
     { slug: "article-2", category: "Medios pagados", title: "Embudos de Google Ads que protegen el margen" },
-    { slug: "article-3", category: "Automatizaci\u00f3n", title: "Planes de automatizaci\u00f3n para equipos B2B" },
+    { slug: "article-3", category: "Automatizaci\u00f3n", title: "Planes de automatizaci\u00f3n para equipos de crecimiento" },
     { slug: "article-4", category: "Estrategia", title: "Del tr\u00e1fico al ingreso: arquitectura de medici\u00f3n" }
   ]
 };
@@ -72,3 +72,5 @@ window.BLOG_INDEX = BLOG_INDEX;
 
   filterCards();
 })();
+
+
