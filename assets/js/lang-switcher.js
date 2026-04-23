@@ -1,48 +1,48 @@
 ﻿const ROUTE_MAP = {
   home: {
-    en: "/en/index.html",
-    fr: "/fr/index.html",
-    es: "/es/index.html"
+    en: "en/index.html",
+    fr: "fr/index.html",
+    es: "es/index.html"
   },
   services: {
-    en: "/en/services.html",
-    fr: "/fr/services.html",
-    es: "/es/services.html"
+    en: "en/services.html",
+    fr: "fr/services.html",
+    es: "es/services.html"
   },
   consultation: {
-    en: "/en/consultation.html",
-    fr: "/fr/consultation.html",
-    es: "/es/consultation.html"
+    en: "en/consultation.html",
+    fr: "fr/consultation.html",
+    es: "es/consultation.html"
   },
   blog: {
-    en: "/en/blog.html",
-    fr: "/fr/blog.html",
-    es: "/es/blog.html"
+    en: "en/blog.html",
+    fr: "fr/blog.html",
+    es: "es/blog.html"
   },
   contact: {
-    en: "/en/contact.html",
-    fr: "/fr/contact.html",
-    es: "/es/contact.html"
+    en: "en/contact.html",
+    fr: "fr/contact.html",
+    es: "es/contact.html"
   },
   "article-1": {
-    en: "/en/blog/article-1.html",
-    fr: "/fr/blog/article-1.html",
-    es: "/es/blog/article-1.html"
+    en: "en/blog/article-1.html",
+    fr: "fr/blog/article-1.html",
+    es: "es/blog/article-1.html"
   },
   "article-2": {
-    en: "/en/blog/article-2.html",
-    fr: "/fr/blog/article-2.html",
-    es: "/es/blog/article-2.html"
+    en: "en/blog/article-2.html",
+    fr: "fr/blog/article-2.html",
+    es: "es/blog/article-2.html"
   },
   "article-3": {
-    en: "/en/blog/article-3.html",
-    fr: "/fr/blog/article-3.html",
-    es: "/es/blog/article-3.html"
+    en: "en/blog/article-3.html",
+    fr: "fr/blog/article-3.html",
+    es: "es/blog/article-3.html"
   },
   "article-4": {
-    en: "/en/blog/article-4.html",
-    fr: "/fr/blog/article-4.html",
-    es: "/es/blog/article-4.html"
+    en: "en/blog/article-4.html",
+    fr: "fr/blog/article-4.html",
+    es: "es/blog/article-4.html"
   }
 };
 
@@ -95,4 +95,5 @@ window.I18N_UI = I18N_UI;
     }
   });
 })();
+
 

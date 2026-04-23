@@ -3,6 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-dynamic-base>
+    (function () {
+      var pathSegments = window.location.pathname.split("/").filter(Boolean);
+      var isGitHubPagesHost = window.location.hostname.endsWith("github.io");
+      var languageRoots = { en: true, fr: true, es: true };
+      var basePath = "/";
+
+      if (isGitHubPagesHost && pathSegments.length > 0 && !languageRoots[pathSegments[0]]) {
+        basePath = "/" + pathSegments[0] + "/";
+      }
+
+      document.write('<base href="' + basePath + '">');
+    })();
+  </script>
   <title>Services | NextSolution365</title>
   <meta name="description" content="Digital strategy, web creation, SEO, SEA, social media, content, branding, automation, analytics, and consulting.">
   <link rel="canonical" href="https://nextsolution365.com/en/services.html">
@@ -21,13 +35,13 @@
   <meta name="twitter:title" content="Services | NextSolution365">
   <meta name="twitter:description" content="Digital strategy, web creation, SEO, SEA, social media, content, branding, automation, analytics, and consulting.">
   <meta name="twitter:image" content="https://nextsolution365.com/assets/images/blog-4.svg">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script defer src="/assets/js/lang-switcher.js"></script>
-  <script defer src="/assets/js/site.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="assets/js/lang-switcher.js"></script>
+  <script defer src="assets/js/site.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nextsolution365.com/#organization","name":"NextSolution365","url":"https://nextsolution365.com","logo":"https://nextsolution365.com/assets/icons/logo.svg","email":"info@nextsolution365.com","address":{"@type":"PostalAddress","streetAddress":"No. 5, 17/F, Strand 50, 50 Bonham Strand","addressLocality":"Sheung Wan","addressRegion":"Hong Kong","addressCountry":"HK"}},{"@type":"WebSite","@id":"https://nextsolution365.com/#website","url":"https://nextsolution365.com","name":"NextSolution365","inLanguage":"en"},{"@type":"WebPage","@id":"https://nextsolution365.com/en/services.html#webpage","url":"https://nextsolution365.com/en/services.html","inLanguage":"en"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://nextsolution365.com/en/services.html#service","name":"NextSolution365","url":"https://nextsolution365.com/en/services.html","areaServed":"Worldwide","serviceType":["Digital Strategy","Website Creation","Web Design / UX UI","SEO","SEA / Google Ads","Social Media Marketing","Content Marketing","Branding","Marketing Automation","Performance Analytics","Lead Generation","Consulting"]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nextsolution365.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://nextsolution365.com/en/services.html"}]}</script>
@@ -39,8 +53,8 @@
 <header class="site-header" data-site-header>
   <div class="header-wrap">
     <div class="header-inner">
-      <a class="site-brand site-brand--header" data-route-link="home" href="/en/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--header" data-route-link="home" href="en/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Digital Growth Agency</span>
@@ -48,21 +62,21 @@
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <ul class="nav-list">
-          <li><a class="nav-link" data-route-link="home" href="/en/index.html">Home</a></li>
-          <li><a class="nav-link is-current" data-route-link="services" href="/en/services.html">Services</a></li>
-          <li><a class="nav-link" data-route-link="consultation" href="/en/consultation.html">Consultation</a></li>
-          <li><a class="nav-link" data-route-link="blog" href="/en/blog.html">Blog</a></li>
-          <li><a class="nav-link" data-route-link="contact" href="/en/contact.html">Contact</a></li>
+          <li><a class="nav-link" data-route-link="home" href="en/index.html">Home</a></li>
+          <li><a class="nav-link is-current" data-route-link="services" href="en/services.html">Services</a></li>
+          <li><a class="nav-link" data-route-link="consultation" href="en/consultation.html">Consultation</a></li>
+          <li><a class="nav-link" data-route-link="blog" href="en/blog.html">Blog</a></li>
+          <li><a class="nav-link" data-route-link="contact" href="en/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/services.html">EN</a>
-  <a data-lang-link="fr" href="/fr/services.html">FR</a>
-  <a data-lang-link="es" href="/es/services.html">ES</a>
+  <a data-lang-link="en" href="en/services.html">EN</a>
+  <a data-lang-link="fr" href="fr/services.html">FR</a>
+  <a data-lang-link="es" href="es/services.html">ES</a>
 </div>
-        <a class="btn btn-primary" data-route-link="consultation" href="/en/consultation.html">Request Consultation</a>
+        <a class="btn btn-primary" data-route-link="consultation" href="en/consultation.html">Request Consultation</a>
         <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -70,33 +84,33 @@
   <div class="mobile-panel" data-mobile-panel>
     <nav aria-label="Mobile">
       <ul class="nav-list">
-        <li><a class="nav-link" data-route-link="home" href="/en/index.html">Home</a></li>
-        <li><a class="nav-link is-current" data-route-link="services" href="/en/services.html">Services</a></li>
-        <li><a class="nav-link" data-route-link="consultation" href="/en/consultation.html">Consultation</a></li>
-        <li><a class="nav-link" data-route-link="blog" href="/en/blog.html">Blog</a></li>
-        <li><a class="nav-link" data-route-link="contact" href="/en/contact.html">Contact</a></li>
+        <li><a class="nav-link" data-route-link="home" href="en/index.html">Home</a></li>
+        <li><a class="nav-link is-current" data-route-link="services" href="en/services.html">Services</a></li>
+        <li><a class="nav-link" data-route-link="consultation" href="en/consultation.html">Consultation</a></li>
+        <li><a class="nav-link" data-route-link="blog" href="en/blog.html">Blog</a></li>
+        <li><a class="nav-link" data-route-link="contact" href="en/contact.html">Contact</a></li>
       </ul>
     </nav>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/services.html">EN</a>
-  <a data-lang-link="fr" href="/fr/services.html">FR</a>
-  <a data-lang-link="es" href="/es/services.html">ES</a>
+  <a data-lang-link="en" href="en/services.html">EN</a>
+  <a data-lang-link="fr" href="fr/services.html">FR</a>
+  <a data-lang-link="es" href="es/services.html">ES</a>
 </div>
-    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="/en/consultation.html">Request Consultation</a>
+    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="en/consultation.html">Request Consultation</a>
   </div>
 </header>
 <main id="main-content" class="main-content">
-<section class="page-hero"><div class="container reveal"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/en/index.html">Home</a><span class="separator">/</span><span aria-current="page">Services</span></nav><h1 class="section-title">Services engineered for growth clarity and execution quality</h1><p class="lead">Our delivery model combines strategy, channel operations, and measurement in one accountable system.</p><nav class="anchor-nav"><a href="#services-grid">Services</a><a href="#deliverables">Standard deliverables in every engagement</a></nav></div></section>
+<section class="page-hero"><div class="container reveal"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="en/index.html">Home</a><span class="separator">/</span><span aria-current="page">Services</span></nav><h1 class="section-title">Services engineered for growth clarity and execution quality</h1><p class="lead">Our delivery model combines strategy, channel operations, and measurement in one accountable system.</p><nav class="anchor-nav"><a href="#services-grid">Services</a><a href="#deliverables">Standard deliverables in every engagement</a></nav></div></section>
 <section class="section" id="services-grid" style="padding-top:16px;"><div class="container"><div class="grid-3" data-stagger><article class="card reveal" data-service="Digital Strategy"><div class="icon-badge">1</div><h2 style="font-size:1.1rem;">Digital Strategy</h2><p>Channel roadmap, positioning, and KPI model for sustainable growth.</p></article><article class="card reveal" data-service="Website Creation"><div class="icon-badge">2</div><h2 style="font-size:1.1rem;">Website Creation</h2><p>Conversion-centered websites built with speed, SEO, and clear architecture.</p></article><article class="card reveal" data-service="Web Design / UX UI"><div class="icon-badge">3</div><h2 style="font-size:1.1rem;">Web Design / UX UI</h2><p>High-trust interfaces balancing storytelling and performance behavior.</p></article><article class="card reveal" data-service="SEO"><div class="icon-badge">4</div><h2 style="font-size:1.1rem;">SEO</h2><p>Technical and editorial SEO for discoverability across search and AI surfaces.</p></article><article class="card reveal" data-service="SEA / Google Ads"><div class="icon-badge">5</div><h2 style="font-size:1.1rem;">SEA / Google Ads</h2><p>Intent-based campaigns focused on margin efficiency and lead quality.</p></article><article class="card reveal" data-service="Social Media Marketing"><div class="icon-badge">6</div><h2 style="font-size:1.1rem;">Social Media Marketing</h2><p>Organic and paid social programs to scale relevance and demand.</p></article><article class="card reveal" data-service="Content Marketing"><div class="icon-badge">7</div><h2 style="font-size:1.1rem;">Content Marketing</h2><p>Editorial systems that support both brand authority and conversion.</p></article><article class="card reveal" data-service="Branding"><div class="icon-badge">8</div><h2 style="font-size:1.1rem;">Branding</h2><p>Positioning language, visual identity, and market consistency.</p></article><article class="card reveal" data-service="Marketing Automation"><div class="icon-badge">9</div><h2 style="font-size:1.1rem;">Marketing Automation</h2><p>Lifecycle flows and lead nurturing connected to CRM logic.</p></article><article class="card reveal" data-service="Performance Analytics"><div class="icon-badge">10</div><h2 style="font-size:1.1rem;">Performance Analytics</h2><p>Decision-ready dashboards and optimization feedback loops.</p></article><article class="card reveal" data-service="Lead Generation"><div class="icon-badge">11</div><h2 style="font-size:1.1rem;">Lead Generation</h2><p>Offer architecture and conversion paths for qualified pipeline.</p></article><article class="card reveal" data-service="Consulting"><div class="icon-badge">12</div><h2 style="font-size:1.1rem;">Consulting</h2><p>Executive workshops and ongoing strategic advisory.</p></article></div></div></section>
 <section class="section" id="deliverables" style="padding-top:10px;"><div class="container split"><div><h2 class="section-title">Standard deliverables in every engagement</h2><p class="section-lead">Every collaboration includes a measurable baseline, weekly optimization rhythm, and transparent reporting.</p></div><ol class="process"><li class="reveal"><h3>Discovery</h3><p>Audit channels, data quality, and market position.</p></li><li class="reveal"><h3>Blueprint</h3><p>Define roadmap, experiments, and channel sequencing.</p></li><li class="reveal"><h3>Launch</h3><p>Deploy campaigns, pages, creative assets, and tracking.</p></li><li class="reveal"><h3>Optimize</h3><p>Run weekly test loops across message, audience, and conversion.</p></li><li class="reveal"><h3>Scale</h3><p>Increase investment where economics and retention are validated.</p></li></ol></div></section>
-<section class="section" style="padding-top:8px;"><div class="container"><div class="cta-band reveal"><h2>Need a tailored service mix?</h2><p>Book a consultation and get a channel sequence adapted to your goals and growth stage.</p><div class="cta-actions"><a class="btn btn-secondary" href="/en/consultation.html">Request Consultation</a><a class="btn btn-ghost" href="/en/contact.html">Contact</a></div></div></div></section></main>
+<section class="section" style="padding-top:8px;"><div class="container"><div class="cta-band reveal"><h2>Need a tailored service mix?</h2><p>Book a consultation and get a channel sequence adapted to your goals and growth stage.</p><div class="cta-actions"><a class="btn btn-secondary" href="en/consultation.html">Request Consultation</a><a class="btn btn-ghost" href="en/contact.html">Contact</a></div></div></div></section></main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a class="site-brand site-brand--footer" href="/en/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--footer" href="en/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Digital Growth Agency</span>
@@ -107,10 +121,10 @@
     <div class="footer-col">
       <h3>Quick links</h3>
       <ul>
-        <li><a href="/en/services.html">Services</a></li>
-        <li><a href="/en/consultation.html">Consultation</a></li>
-        <li><a href="/en/blog.html">Blog</a></li>
-        <li><a href="/en/contact.html">Contact</a></li>
+        <li><a href="en/services.html">Services</a></li>
+        <li><a href="en/consultation.html">Consultation</a></li>
+        <li><a href="en/blog.html">Blog</a></li>
+        <li><a href="en/contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -130,14 +144,15 @@
     <span>&copy; <span data-year></span> NextSolution365. All rights reserved.</span>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/index.html">EN</a>
-  <a data-lang-link="fr" href="/fr/index.html">FR</a>
-  <a data-lang-link="es" href="/es/index.html">ES</a>
+  <a data-lang-link="en" href="en/index.html">EN</a>
+  <a data-lang-link="fr" href="fr/index.html">FR</a>
+  <a data-lang-link="es" href="es/index.html">ES</a>
 </div>
   </div>
 </footer>
 </body>
 </html>
+
 
 
 

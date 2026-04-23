@@ -3,6 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-dynamic-base>
+    (function () {
+      var pathSegments = window.location.pathname.split("/").filter(Boolean);
+      var isGitHubPagesHost = window.location.hostname.endsWith("github.io");
+      var languageRoots = { en: true, fr: true, es: true };
+      var basePath = "/";
+
+      if (isGitHubPagesHost && pathSegments.length > 0 && !languageRoots[pathSegments[0]]) {
+        basePath = "/" + pathSegments[0] + "/";
+      }
+
+      document.write('<base href="' + basePath + '">');
+    })();
+  </script>
   <title>NextSolution365 | Agence de marketing digital orient&eacute;e croissance</title>
   <meta name="description" content="Agence premium : strat&eacute;gie, SEO, m&eacute;dias payants, web design, contenu, automatisation et analytique.">
   <link rel="canonical" href="https://nextsolution365.com/fr/index.html">
@@ -21,13 +35,13 @@
   <meta name="twitter:title" content="NextSolution365 | Agence de marketing digital orient&eacute;e croissance">
   <meta name="twitter:description" content="Agence premium : strat&eacute;gie, SEO, m&eacute;dias payants, web design, contenu, automatisation et analytique.">
   <meta name="twitter:image" content="https://nextsolution365.com/assets/images/blog-4.svg">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script defer src="/assets/js/lang-switcher.js"></script>
-  <script defer src="/assets/js/site.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="assets/js/lang-switcher.js"></script>
+  <script defer src="assets/js/site.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nextsolution365.com/#organization","name":"NextSolution365","url":"https://nextsolution365.com","logo":"https://nextsolution365.com/assets/icons/logo.svg","email":"info@nextsolution365.com","address":{"@type":"PostalAddress","streetAddress":"No. 5, 17/F, Strand 50, 50 Bonham Strand","addressLocality":"Sheung Wan","addressRegion":"Hong Kong","addressCountry":"HK"}},{"@type":"WebSite","@id":"https://nextsolution365.com/#website","url":"https://nextsolution365.com","name":"NextSolution365","inLanguage":"fr"},{"@type":"WebPage","@id":"https://nextsolution365.com/fr/index.html#webpage","url":"https://nextsolution365.com/fr/index.html","inLanguage":"fr"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://nextsolution365.com/fr/index.html#service","name":"NextSolution365","url":"https://nextsolution365.com/fr/index.html","areaServed":"Worldwide","serviceType":["Strat&eacute;gie digitale","Cr&eacute;ation de site web","Web Design / UX UI","SEO","SEA / Google Ads","Marketing des r&eacute;seaux sociaux","Marketing de contenu","Branding","Automatisation marketing","Analyse de performance","G&eacute;n&eacute;ration de leads","Conseil"]}</script>
 </head>
@@ -38,8 +52,8 @@
 <header class="site-header" data-site-header>
   <div class="header-wrap">
     <div class="header-inner">
-      <a class="site-brand site-brand--header" data-route-link="home" href="/fr/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--header" data-route-link="home" href="fr/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Agence de croissance digitale</span>
@@ -47,21 +61,21 @@
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <ul class="nav-list">
-          <li><a class="nav-link is-current" data-route-link="home" href="/fr/index.html">Accueil</a></li>
-          <li><a class="nav-link" data-route-link="services" href="/fr/services.html">Services</a></li>
-          <li><a class="nav-link" data-route-link="consultation" href="/fr/consultation.html">Consultation</a></li>
-          <li><a class="nav-link" data-route-link="blog" href="/fr/blog.html">Blog</a></li>
-          <li><a class="nav-link" data-route-link="contact" href="/fr/contact.html">Contact</a></li>
+          <li><a class="nav-link is-current" data-route-link="home" href="fr/index.html">Accueil</a></li>
+          <li><a class="nav-link" data-route-link="services" href="fr/services.html">Services</a></li>
+          <li><a class="nav-link" data-route-link="consultation" href="fr/consultation.html">Consultation</a></li>
+          <li><a class="nav-link" data-route-link="blog" href="fr/blog.html">Blog</a></li>
+          <li><a class="nav-link" data-route-link="contact" href="fr/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/index.html">EN</a>
-  <a data-lang-link="fr" href="/fr/index.html">FR</a>
-  <a data-lang-link="es" href="/es/index.html">ES</a>
+  <a data-lang-link="en" href="en/index.html">EN</a>
+  <a data-lang-link="fr" href="fr/index.html">FR</a>
+  <a data-lang-link="es" href="es/index.html">ES</a>
 </div>
-        <a class="btn btn-primary" data-route-link="consultation" href="/fr/consultation.html">Demander une consultation</a>
+        <a class="btn btn-primary" data-route-link="consultation" href="fr/consultation.html">Demander une consultation</a>
         <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -69,20 +83,20 @@
   <div class="mobile-panel" data-mobile-panel>
     <nav aria-label="Mobile">
       <ul class="nav-list">
-        <li><a class="nav-link is-current" data-route-link="home" href="/fr/index.html">Accueil</a></li>
-        <li><a class="nav-link" data-route-link="services" href="/fr/services.html">Services</a></li>
-        <li><a class="nav-link" data-route-link="consultation" href="/fr/consultation.html">Consultation</a></li>
-        <li><a class="nav-link" data-route-link="blog" href="/fr/blog.html">Blog</a></li>
-        <li><a class="nav-link" data-route-link="contact" href="/fr/contact.html">Contact</a></li>
+        <li><a class="nav-link is-current" data-route-link="home" href="fr/index.html">Accueil</a></li>
+        <li><a class="nav-link" data-route-link="services" href="fr/services.html">Services</a></li>
+        <li><a class="nav-link" data-route-link="consultation" href="fr/consultation.html">Consultation</a></li>
+        <li><a class="nav-link" data-route-link="blog" href="fr/blog.html">Blog</a></li>
+        <li><a class="nav-link" data-route-link="contact" href="fr/contact.html">Contact</a></li>
       </ul>
     </nav>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/index.html">EN</a>
-  <a data-lang-link="fr" href="/fr/index.html">FR</a>
-  <a data-lang-link="es" href="/es/index.html">ES</a>
+  <a data-lang-link="en" href="en/index.html">EN</a>
+  <a data-lang-link="fr" href="fr/index.html">FR</a>
+  <a data-lang-link="es" href="es/index.html">ES</a>
 </div>
-    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="/fr/consultation.html">Demander une consultation</a>
+    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="fr/consultation.html">Demander une consultation</a>
   </div>
 </header>
 <main id="main-content" class="main-content">
@@ -93,8 +107,8 @@
       <h1>Construisez un moteur digital intelligent pour des revenus pr&eacute;visibles.</h1>
       <p>NextSolution365 combine strat&eacute;gie, ex&eacute;cution creative et optimisation de performance pour d&eacute;velopper un pipeline qualifi&eacute;.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="/fr/consultation.html">Demander une consultation</a>
-        <a class="btn btn-secondary" href="/fr/services.html">Voir les services</a>
+        <a class="btn btn-primary" href="fr/consultation.html">Demander une consultation</a>
+        <a class="btn btn-secondary" href="fr/services.html">Voir les services</a>
       </div>
       <div class="hero-proof"><span>La confiance d'&eacute;quipes SaaS, B2B et orient&eacute;es croissance</span></div>
     </div>
@@ -136,31 +150,31 @@
   <div class="container">
     <h2 class="section-title">R&eacute;alisations recentes</h2>
     <div class="grid-3" data-stagger>
-      <article class="card reveal"><div class="case-thumb"><img src="/assets/images/blog-4.svg" alt="Cas analytics croissance" loading="lazy"></div><h3>Croissance software B2B</h3><p>Programme SEO, m&eacute;dias payants et automatisation qui a acc&eacute;l&eacute;r&eacute; le pipeline qualifi&eacute;.</p><div class="case-meta"><span class="tag">B2B</span><span class="tag">SEO</span></div></article>
-      <article class="card reveal"><div class="case-thumb"><img src="/assets/images/blog-2.svg" alt="Cas m&eacute;dias payants" loading="lazy"></div><h3>Relance d'une marque internationale</h3><p>Refonte web et campagnes pour r&eacute;duire le gaspillage acquisition et am&eacute;liorer la conversion.</p><div class="case-meta"><span class="tag">M&eacute;dias payants</span><span class="tag">CRO</span></div></article>
-      <article class="card reveal"><div class="case-thumb"><img src="/assets/images/blog-1.svg" alt="Cas contenu SEO" loading="lazy"></div><h3>Expansion SEO multilingue</h3><p>Structure editoriale orient&eacute;e entit&eacute;s pour augmenter la d&eacute;couvrabilit&eacute; sur plusieurs march&eacute;s.</p><div class="case-meta"><span class="tag">SEO</span><span class="tag">Contenu</span></div></article>
+      <article class="card reveal"><div class="case-thumb"><img src="assets/images/blog-4.svg" alt="Cas analytics croissance" loading="lazy"></div><h3>Croissance software B2B</h3><p>Programme SEO, m&eacute;dias payants et automatisation qui a acc&eacute;l&eacute;r&eacute; le pipeline qualifi&eacute;.</p><div class="case-meta"><span class="tag">B2B</span><span class="tag">SEO</span></div></article>
+      <article class="card reveal"><div class="case-thumb"><img src="assets/images/blog-2.svg" alt="Cas m&eacute;dias payants" loading="lazy"></div><h3>Relance d'une marque internationale</h3><p>Refonte web et campagnes pour r&eacute;duire le gaspillage acquisition et am&eacute;liorer la conversion.</p><div class="case-meta"><span class="tag">M&eacute;dias payants</span><span class="tag">CRO</span></div></article>
+      <article class="card reveal"><div class="case-thumb"><img src="assets/images/blog-1.svg" alt="Cas contenu SEO" loading="lazy"></div><h3>Expansion SEO multilingue</h3><p>Structure editoriale orient&eacute;e entit&eacute;s pour augmenter la d&eacute;couvrabilit&eacute; sur plusieurs march&eacute;s.</p><div class="case-meta"><span class="tag">SEO</span><span class="tag">Contenu</span></div></article>
     </div>
   </div>
 </section>
 <section class="section" style="padding-top:8px;">
-  <div class="container"><div class="cta-band reveal"><h2>Transformez le marketing en systeme de croissance</h2><p>Partagez vos objectifs et contraintes. Nous proposons une feuille de route pragmatique.</p><div class="cta-actions"><a class="btn btn-secondary" href="/fr/consultation.html">Demander une consultation</a><a class="btn btn-ghost" href="/fr/services.html">Voir les services</a></div></div></div>
+  <div class="container"><div class="cta-band reveal"><h2>Transformez le marketing en systeme de croissance</h2><p>Partagez vos objectifs et contraintes. Nous proposons une feuille de route pragmatique.</p><div class="cta-actions"><a class="btn btn-secondary" href="fr/consultation.html">Demander une consultation</a><a class="btn btn-ghost" href="fr/services.html">Voir les services</a></div></div></div>
 </section>
 <section class="section" style="padding-top:10px;">
   <div class="container">
     <p class="section-eyebrow">Blog</p>
     <h2 class="section-title">Lire les analyses</h2>
     <div class="blog-grid" data-stagger>
-      <article class="blog-card reveal"><a href="/fr/blog/article-1.html"><div class="blog-image"><img src="/assets/images/blog-1.svg" alt="Structurer un programme SEO adapt&eacute; &agrave; l'IA" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">SEO</span><time datetime="2026-03-18">18 mars 2026</time></div><h3 class="blog-title"><a href="/fr/blog/article-1.html">Structurer un programme SEO adapt&eacute; &agrave; l'IA</a></h3><p class="blog-excerpt">Un mod&egrave;le pratique pour relier intention, base technique et coh&eacute;rence editoriale.</p></div></article><article class="blog-card reveal"><a href="/fr/blog/article-2.html"><div class="blog-image"><img src="/assets/images/blog-2.svg" alt="Funnels Google Ads qui prot&egrave;gent la marge" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Media payants</span><time datetime="2026-03-09">9 mars 2026</time></div><h3 class="blog-title"><a href="/fr/blog/article-2.html">Funnels Google Ads qui prot&egrave;gent la marge</a></h3><p class="blog-excerpt">Concevoir l'acquisition payante autour de l'intention, de l'&eacute;conomie et du post-clic.</p></div></article><article class="blog-card reveal"><a href="/fr/blog/article-3.html"><div class="blog-image"><img src="/assets/images/blog-3.svg" alt="Plans d'automatisation pour &eacute;quipes B2B" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Automatisation</span><time datetime="2026-02-27">27 f&eacute;vrier 2026</time></div><h3 class="blog-title"><a href="/fr/blog/article-3.html">Plans d'automatisation pour &eacute;quipes B2B</a></h3><p class="blog-excerpt">L'automatisation du cycle de vie doit suivre la progression r&eacute;elle des acheteurs.</p></div></article>
+      <article class="blog-card reveal"><a href="fr/blog/article-1.html"><div class="blog-image"><img src="assets/images/blog-1.svg" alt="Structurer un programme SEO adapt&eacute; &agrave; l'IA" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">SEO</span><time datetime="2026-03-18">18 mars 2026</time></div><h3 class="blog-title"><a href="fr/blog/article-1.html">Structurer un programme SEO adapt&eacute; &agrave; l'IA</a></h3><p class="blog-excerpt">Un mod&egrave;le pratique pour relier intention, base technique et coh&eacute;rence editoriale.</p></div></article><article class="blog-card reveal"><a href="fr/blog/article-2.html"><div class="blog-image"><img src="assets/images/blog-2.svg" alt="Funnels Google Ads qui prot&egrave;gent la marge" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Media payants</span><time datetime="2026-03-09">9 mars 2026</time></div><h3 class="blog-title"><a href="fr/blog/article-2.html">Funnels Google Ads qui prot&egrave;gent la marge</a></h3><p class="blog-excerpt">Concevoir l'acquisition payante autour de l'intention, de l'&eacute;conomie et du post-clic.</p></div></article><article class="blog-card reveal"><a href="fr/blog/article-3.html"><div class="blog-image"><img src="assets/images/blog-3.svg" alt="Plans d'automatisation pour &eacute;quipes B2B" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Automatisation</span><time datetime="2026-02-27">27 f&eacute;vrier 2026</time></div><h3 class="blog-title"><a href="fr/blog/article-3.html">Plans d'automatisation pour &eacute;quipes B2B</a></h3><p class="blog-excerpt">L'automatisation du cycle de vie doit suivre la progression r&eacute;elle des acheteurs.</p></div></article>
     </div>
-    <div style="margin-top:14px;"><a class="btn btn-secondary" href="/fr/blog.html">Lire les analyses</a></div>
+    <div style="margin-top:14px;"><a class="btn btn-secondary" href="fr/blog.html">Lire les analyses</a></div>
   </div>
 </section></main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a class="site-brand site-brand--footer" href="/fr/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--footer" href="fr/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Agence de croissance digitale</span>
@@ -171,10 +185,10 @@
     <div class="footer-col">
       <h3>Liens rapides</h3>
       <ul>
-        <li><a href="/fr/services.html">Services</a></li>
-        <li><a href="/fr/consultation.html">Consultation</a></li>
-        <li><a href="/fr/blog.html">Blog</a></li>
-        <li><a href="/fr/contact.html">Contact</a></li>
+        <li><a href="fr/services.html">Services</a></li>
+        <li><a href="fr/consultation.html">Consultation</a></li>
+        <li><a href="fr/blog.html">Blog</a></li>
+        <li><a href="fr/contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -194,14 +208,15 @@
     <span>&copy; <span data-year></span> NextSolution365. Tous droits r&eacute;serv&eacute;s.</span>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/index.html">EN</a>
-  <a data-lang-link="fr" href="/fr/index.html">FR</a>
-  <a data-lang-link="es" href="/es/index.html">ES</a>
+  <a data-lang-link="en" href="en/index.html">EN</a>
+  <a data-lang-link="fr" href="fr/index.html">FR</a>
+  <a data-lang-link="es" href="es/index.html">ES</a>
 </div>
   </div>
 </footer>
 </body>
 </html>
+
 
 
 

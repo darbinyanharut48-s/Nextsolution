@@ -4,14 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-dynamic-base>
+    (function () {
+      var pathSegments = window.location.pathname.split("/").filter(Boolean);
+      var isGitHubPagesHost = window.location.hostname.endsWith("github.io");
+      var languageRoots = { en: true, fr: true, es: true };
+      var basePath = "/";
+
+      if (isGitHubPagesHost && pathSegments.length > 0 && !languageRoots[pathSegments[0]]) {
+        basePath = "/" + pathSegments[0] + "/";
+      }
+
+      document.write('<base href="' + basePath + '">');
+    })();
+  </script>
     <title>NextSolution365</title>
-    <meta http-equiv="refresh" content="0; url=/en/index.html">
+    <meta http-equiv="refresh" content="0; url=en/index.html">
     <link rel="canonical" href="https://nextsolution365.com/en/index.html">
-    <script>window.location.replace('/en/index.html');</script>
+    <script>window.location.replace('en/index.html');</script>
 </head>
 
 <body>
-    <p>Redirecting to <a href="/en/index.html">/en/index.html</a>...</p>
+    <p>Redirecting to <a href="en/index.html">/en/index.html</a>...</p>
 </body>
 
 </html>
+

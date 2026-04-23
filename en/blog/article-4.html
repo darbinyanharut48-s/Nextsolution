@@ -3,6 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-dynamic-base>
+    (function () {
+      var pathSegments = window.location.pathname.split("/").filter(Boolean);
+      var isGitHubPagesHost = window.location.hostname.endsWith("github.io");
+      var languageRoots = { en: true, fr: true, es: true };
+      var basePath = "/";
+
+      if (isGitHubPagesHost && pathSegments.length > 0 && !languageRoots[pathSegments[0]]) {
+        basePath = "/" + pathSegments[0] + "/";
+      }
+
+      document.write('<base href="' + basePath + '">');
+    })();
+  </script>
   <title>Revenue Measurement Architecture | NextSolution365 Blog</title>
   <meta name="description" content="How to link channel metrics to pipeline quality and business decisions.">
   <link rel="canonical" href="https://nextsolution365.com/en/blog/article-4.html">
@@ -21,13 +35,13 @@
   <meta name="twitter:title" content="Revenue Measurement Architecture | NextSolution365 Blog">
   <meta name="twitter:description" content="How to link channel metrics to pipeline quality and business decisions.">
   <meta name="twitter:image" content="https://nextsolution365.com/assets/images/blog-4.svg">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script defer src="/assets/js/lang-switcher.js"></script>
-  <script defer src="/assets/js/site.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="assets/js/lang-switcher.js"></script>
+  <script defer src="assets/js/site.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nextsolution365.com/#organization","name":"NextSolution365","url":"https://nextsolution365.com","logo":"https://nextsolution365.com/assets/icons/logo.svg","email":"info@nextsolution365.com","address":{"@type":"PostalAddress","streetAddress":"No. 5, 17/F, Strand 50, 50 Bonham Strand","addressLocality":"Sheung Wan","addressRegion":"Hong Kong","addressCountry":"HK"}},{"@type":"WebSite","@id":"https://nextsolution365.com/#website","url":"https://nextsolution365.com","name":"NextSolution365","inLanguage":"en"},{"@type":"WebPage","@id":"https://nextsolution365.com/en/blog/article-4.html#webpage","url":"https://nextsolution365.com/en/blog/article-4.html","inLanguage":"en"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nextsolution365.com/en/index.html"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://nextsolution365.com/en/blog.html"},{"@type":"ListItem","position":3,"name":"From traffic to revenue measurement architecture","item":"https://nextsolution365.com/en/blog/article-4.html"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"From traffic to revenue measurement architecture","datePublished":"2026-02-14","dateModified":"2026-02-14","description":"How to link channel metrics to pipeline quality and business decisions.","image":"https://nextsolution365.com/assets/images/blog-4.svg","mainEntityOfPage":"https://nextsolution365.com/en/blog/article-4.html","author":{"@type":"Organization","name":"NextSolution365 Editorial"},"publisher":{"@type":"Organization","name":"NextSolution365","logo":{"@type":"ImageObject","url":"https://nextsolution365.com/assets/icons/logo.svg"}}}</script>
@@ -39,8 +53,8 @@
 <header class="site-header" data-site-header>
   <div class="header-wrap">
     <div class="header-inner">
-      <a class="site-brand site-brand--header" data-route-link="home" href="/en/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--header" data-route-link="home" href="en/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Digital Growth Agency</span>
@@ -48,21 +62,21 @@
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <ul class="nav-list">
-          <li><a class="nav-link" data-route-link="home" href="/en/index.html">Home</a></li>
-          <li><a class="nav-link" data-route-link="services" href="/en/services.html">Services</a></li>
-          <li><a class="nav-link" data-route-link="consultation" href="/en/consultation.html">Consultation</a></li>
-          <li><a class="nav-link" data-route-link="blog" href="/en/blog.html">Blog</a></li>
-          <li><a class="nav-link" data-route-link="contact" href="/en/contact.html">Contact</a></li>
+          <li><a class="nav-link" data-route-link="home" href="en/index.html">Home</a></li>
+          <li><a class="nav-link" data-route-link="services" href="en/services.html">Services</a></li>
+          <li><a class="nav-link" data-route-link="consultation" href="en/consultation.html">Consultation</a></li>
+          <li><a class="nav-link" data-route-link="blog" href="en/blog.html">Blog</a></li>
+          <li><a class="nav-link" data-route-link="contact" href="en/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/blog/article-4.html">EN</a>
-  <a data-lang-link="fr" href="/fr/blog/article-4.html">FR</a>
-  <a data-lang-link="es" href="/es/blog/article-4.html">ES</a>
+  <a data-lang-link="en" href="en/blog/article-4.html">EN</a>
+  <a data-lang-link="fr" href="fr/blog/article-4.html">FR</a>
+  <a data-lang-link="es" href="es/blog/article-4.html">ES</a>
 </div>
-        <a class="btn btn-primary" data-route-link="consultation" href="/en/consultation.html">Request Consultation</a>
+        <a class="btn btn-primary" data-route-link="consultation" href="en/consultation.html">Request Consultation</a>
         <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -70,44 +84,44 @@
   <div class="mobile-panel" data-mobile-panel>
     <nav aria-label="Mobile">
       <ul class="nav-list">
-        <li><a class="nav-link" data-route-link="home" href="/en/index.html">Home</a></li>
-        <li><a class="nav-link" data-route-link="services" href="/en/services.html">Services</a></li>
-        <li><a class="nav-link" data-route-link="consultation" href="/en/consultation.html">Consultation</a></li>
-        <li><a class="nav-link" data-route-link="blog" href="/en/blog.html">Blog</a></li>
-        <li><a class="nav-link" data-route-link="contact" href="/en/contact.html">Contact</a></li>
+        <li><a class="nav-link" data-route-link="home" href="en/index.html">Home</a></li>
+        <li><a class="nav-link" data-route-link="services" href="en/services.html">Services</a></li>
+        <li><a class="nav-link" data-route-link="consultation" href="en/consultation.html">Consultation</a></li>
+        <li><a class="nav-link" data-route-link="blog" href="en/blog.html">Blog</a></li>
+        <li><a class="nav-link" data-route-link="contact" href="en/contact.html">Contact</a></li>
       </ul>
     </nav>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/blog/article-4.html">EN</a>
-  <a data-lang-link="fr" href="/fr/blog/article-4.html">FR</a>
-  <a data-lang-link="es" href="/es/blog/article-4.html">ES</a>
+  <a data-lang-link="en" href="en/blog/article-4.html">EN</a>
+  <a data-lang-link="fr" href="fr/blog/article-4.html">FR</a>
+  <a data-lang-link="es" href="es/blog/article-4.html">ES</a>
 </div>
-    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="/en/consultation.html">Request Consultation</a>
+    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="en/consultation.html">Request Consultation</a>
   </div>
 </header>
 <main id="main-content" class="main-content">
-<section class="page-hero" style="padding-bottom:8px;"><div class="container reveal"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/en/index.html">Home</a><span class="separator">/</span><a href="/en/blog.html">Blog</a><span class="separator">/</span><span aria-current="page">From traffic to revenue measurement architecture</span></nav></div></section>
+<section class="page-hero" style="padding-bottom:8px;"><div class="container reveal"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="en/index.html">Home</a><span class="separator">/</span><a href="en/blog.html">Blog</a><span class="separator">/</span><span aria-current="page">From traffic to revenue measurement architecture</span></nav></div></section>
 <section class="section" style="padding-top:10px;"><div class="container article-layout">
   <article class="article-content reveal">
     <div class="blog-meta"><span class="tag">Strategy</span><time datetime="2026-02-14">February 14, 2026</time></div>
     <h1>From traffic to revenue measurement architecture</h1>
     <p style="font-size:1.02rem;color:var(--muted);margin-top:10px;">Build reporting architecture that supports decisions, not dashboard noise.</p>
-    <div class="case-thumb" style="margin-top:14px;"><img src="/assets/images/blog-4.svg" alt="From traffic to revenue measurement architecture" loading="lazy"></div>
+    <div class="case-thumb" style="margin-top:14px;"><img src="assets/images/blog-4.svg" alt="From traffic to revenue measurement architecture" loading="lazy"></div>
     <section><h2>Decision-oriented dashboards</h2><p>Start with decision moments and only then define the required metrics.</p></section><section><h2>Leading and lagging alignment</h2><p>Read traffic and engagement together with qualified pipeline outcomes.</p></section><section><h2>Actionable reporting</h2><p>Every key metric movement should trigger specific optimization actions.</p></section>
   </article>
   <aside class="article-side reveal">
-    <div class="side-card"><h3>Back to Blog</h3><ul><li><a href="/en/blog.html">Blog</a></li></ul></div>
-    <div class="side-card"><h3>Read Insights</h3><ul><li><a href="/en/blog/article-1.html">How to structure an AI-aware SEO program</a></li><li><a href="/en/blog/article-2.html">Google Ads funnels that protect margin</a></li><li><a href="/en/blog/article-3.html">Automation blueprints for B2B teams</a></li></ul></div>
-    <div class="side-card"><h3>Request Consultation</h3><p style="margin-top:8px;color:var(--muted);">Turn these ideas into an execution plan tailored to your market.</p><a class="btn btn-primary" style="margin-top:12px;width:100%;" href="/en/consultation.html">Request Consultation</a></div>
+    <div class="side-card"><h3>Back to Blog</h3><ul><li><a href="en/blog.html">Blog</a></li></ul></div>
+    <div class="side-card"><h3>Read Insights</h3><ul><li><a href="en/blog/article-1.html">How to structure an AI-aware SEO program</a></li><li><a href="en/blog/article-2.html">Google Ads funnels that protect margin</a></li><li><a href="en/blog/article-3.html">Automation blueprints for B2B teams</a></li></ul></div>
+    <div class="side-card"><h3>Request Consultation</h3><p style="margin-top:8px;color:var(--muted);">Turn these ideas into an execution plan tailored to your market.</p><a class="btn btn-primary" style="margin-top:12px;width:100%;" href="en/consultation.html">Request Consultation</a></div>
   </aside>
 </div></section></main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a class="site-brand site-brand--footer" href="/en/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--footer" href="en/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Digital Growth Agency</span>
@@ -118,10 +132,10 @@
     <div class="footer-col">
       <h3>Quick links</h3>
       <ul>
-        <li><a href="/en/services.html">Services</a></li>
-        <li><a href="/en/consultation.html">Consultation</a></li>
-        <li><a href="/en/blog.html">Blog</a></li>
-        <li><a href="/en/contact.html">Contact</a></li>
+        <li><a href="en/services.html">Services</a></li>
+        <li><a href="en/consultation.html">Consultation</a></li>
+        <li><a href="en/blog.html">Blog</a></li>
+        <li><a href="en/contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -141,14 +155,15 @@
     <span>&copy; <span data-year></span> NextSolution365. All rights reserved.</span>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/index.html">EN</a>
-  <a data-lang-link="fr" href="/fr/index.html">FR</a>
-  <a data-lang-link="es" href="/es/index.html">ES</a>
+  <a data-lang-link="en" href="en/index.html">EN</a>
+  <a data-lang-link="fr" href="fr/index.html">FR</a>
+  <a data-lang-link="es" href="es/index.html">ES</a>
 </div>
   </div>
 </footer>
 </body>
 </html>
+
 
 
 

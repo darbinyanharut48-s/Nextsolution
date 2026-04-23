@@ -3,6 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-dynamic-base>
+    (function () {
+      var pathSegments = window.location.pathname.split("/").filter(Boolean);
+      var isGitHubPagesHost = window.location.hostname.endsWith("github.io");
+      var languageRoots = { en: true, fr: true, es: true };
+      var basePath = "/";
+
+      if (isGitHubPagesHost && pathSegments.length > 0 && !languageRoots[pathSegments[0]]) {
+        basePath = "/" + pathSegments[0] + "/";
+      }
+
+      document.write('<base href="' + basePath + '">');
+    })();
+  </script>
   <title>Blog | Analyses NextSolution365</title>
   <meta name="description" content="Analyses appliqu&eacute;es sur le SEO, les m&eacute;dias payants, l'automatisation et l'architecture de mesure.">
   <link rel="canonical" href="https://nextsolution365.com/fr/blog.html">
@@ -21,14 +35,14 @@
   <meta name="twitter:title" content="Blog | Analyses NextSolution365">
   <meta name="twitter:description" content="Analyses appliqu&eacute;es sur le SEO, les m&eacute;dias payants, l'automatisation et l'architecture de mesure.">
   <meta name="twitter:image" content="https://nextsolution365.com/assets/images/blog-4.svg">
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script defer src="/assets/js/lang-switcher.js"></script>
-  <script defer src="/assets/js/site.js"></script>
-  <script defer src="/assets/js/blog.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="assets/js/lang-switcher.js"></script>
+  <script defer src="assets/js/site.js"></script>
+  <script defer src="assets/js/blog.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nextsolution365.com/#organization","name":"NextSolution365","url":"https://nextsolution365.com","logo":"https://nextsolution365.com/assets/icons/logo.svg","email":"info@nextsolution365.com","address":{"@type":"PostalAddress","streetAddress":"No. 5, 17/F, Strand 50, 50 Bonham Strand","addressLocality":"Sheung Wan","addressRegion":"Hong Kong","addressCountry":"HK"}},{"@type":"WebSite","@id":"https://nextsolution365.com/#website","url":"https://nextsolution365.com","name":"NextSolution365","inLanguage":"fr"},{"@type":"WebPage","@id":"https://nextsolution365.com/fr/blog.html#webpage","url":"https://nextsolution365.com/fr/blog.html","inLanguage":"fr"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://nextsolution365.com/fr/index.html"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://nextsolution365.com/fr/blog.html"}]}</script>
 </head>
@@ -39,8 +53,8 @@
 <header class="site-header" data-site-header>
   <div class="header-wrap">
     <div class="header-inner">
-      <a class="site-brand site-brand--header" data-route-link="home" href="/fr/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--header" data-route-link="home" href="fr/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Agence de croissance digitale</span>
@@ -48,21 +62,21 @@
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <ul class="nav-list">
-          <li><a class="nav-link" data-route-link="home" href="/fr/index.html">Accueil</a></li>
-          <li><a class="nav-link" data-route-link="services" href="/fr/services.html">Services</a></li>
-          <li><a class="nav-link" data-route-link="consultation" href="/fr/consultation.html">Consultation</a></li>
-          <li><a class="nav-link is-current" data-route-link="blog" href="/fr/blog.html">Blog</a></li>
-          <li><a class="nav-link" data-route-link="contact" href="/fr/contact.html">Contact</a></li>
+          <li><a class="nav-link" data-route-link="home" href="fr/index.html">Accueil</a></li>
+          <li><a class="nav-link" data-route-link="services" href="fr/services.html">Services</a></li>
+          <li><a class="nav-link" data-route-link="consultation" href="fr/consultation.html">Consultation</a></li>
+          <li><a class="nav-link is-current" data-route-link="blog" href="fr/blog.html">Blog</a></li>
+          <li><a class="nav-link" data-route-link="contact" href="fr/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/blog.html">EN</a>
-  <a data-lang-link="fr" href="/fr/blog.html">FR</a>
-  <a data-lang-link="es" href="/es/blog.html">ES</a>
+  <a data-lang-link="en" href="en/blog.html">EN</a>
+  <a data-lang-link="fr" href="fr/blog.html">FR</a>
+  <a data-lang-link="es" href="es/blog.html">ES</a>
 </div>
-        <a class="btn btn-primary" data-route-link="consultation" href="/fr/consultation.html">Demander une consultation</a>
+        <a class="btn btn-primary" data-route-link="consultation" href="fr/consultation.html">Demander une consultation</a>
         <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -70,31 +84,31 @@
   <div class="mobile-panel" data-mobile-panel>
     <nav aria-label="Mobile">
       <ul class="nav-list">
-        <li><a class="nav-link" data-route-link="home" href="/fr/index.html">Accueil</a></li>
-        <li><a class="nav-link" data-route-link="services" href="/fr/services.html">Services</a></li>
-        <li><a class="nav-link" data-route-link="consultation" href="/fr/consultation.html">Consultation</a></li>
-        <li><a class="nav-link is-current" data-route-link="blog" href="/fr/blog.html">Blog</a></li>
-        <li><a class="nav-link" data-route-link="contact" href="/fr/contact.html">Contact</a></li>
+        <li><a class="nav-link" data-route-link="home" href="fr/index.html">Accueil</a></li>
+        <li><a class="nav-link" data-route-link="services" href="fr/services.html">Services</a></li>
+        <li><a class="nav-link" data-route-link="consultation" href="fr/consultation.html">Consultation</a></li>
+        <li><a class="nav-link is-current" data-route-link="blog" href="fr/blog.html">Blog</a></li>
+        <li><a class="nav-link" data-route-link="contact" href="fr/contact.html">Contact</a></li>
       </ul>
     </nav>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/blog.html">EN</a>
-  <a data-lang-link="fr" href="/fr/blog.html">FR</a>
-  <a data-lang-link="es" href="/es/blog.html">ES</a>
+  <a data-lang-link="en" href="en/blog.html">EN</a>
+  <a data-lang-link="fr" href="fr/blog.html">FR</a>
+  <a data-lang-link="es" href="es/blog.html">ES</a>
 </div>
-    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="/fr/consultation.html">Demander une consultation</a>
+    <a class="btn btn-primary" style="margin-top:12px;width:100%;" data-route-link="consultation" href="fr/consultation.html">Demander une consultation</a>
   </div>
 </header>
 <main id="main-content" class="main-content">
-<section class="page-hero"><div class="container reveal"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/fr/index.html">Accueil</a><span class="separator">/</span><span aria-current="page">Blog</span></nav><h1 class="section-title">Blog</h1><p class="lead">Analyses appliqu&eacute;es sur le SEO, les m&eacute;dias payants, l'automatisation et l'architecture de mesure.</p></div></section>
+<section class="page-hero"><div class="container reveal"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="fr/index.html">Accueil</a><span class="separator">/</span><span aria-current="page">Blog</span></nav><h1 class="section-title">Blog</h1><p class="lead">Analyses appliqu&eacute;es sur le SEO, les m&eacute;dias payants, l'automatisation et l'architecture de mesure.</p></div></section>
 <section class="section" style="padding-top:16px;"><div class="container">
   <div class="blog-tools reveal">
     <input type="search" data-blog-search placeholder="Rechercher un mot-cl&eacute;">
     <div class="filter-chips"><button type="button" class="filter-chip is-active" data-blog-chip="all">Tout</button><button type="button" class="filter-chip" data-blog-chip="seo">SEO</button><button type="button" class="filter-chip" data-blog-chip="paid-m&eacute;dias">Media payants</button><button type="button" class="filter-chip" data-blog-chip="automatisation">Automatisation</button><button type="button" class="filter-chip" data-blog-chip="strategy">Strat&eacute;gie</button></div>
   </div>
   <div class="blog-grid" data-stagger>
-    <article class="blog-card reveal" data-blog-card data-category="seo" data-search="structurer un programme seo adapte a l'ia un mod&egrave;le pratique pour relier intention, base technique et coh&eacute;rence editoriale. seo"><a href="/fr/blog/article-1.html"><div class="blog-image"><img src="/assets/images/blog-1.svg" alt="Structurer un programme SEO adapt&eacute; &agrave; l'IA" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">SEO</span><time datetime="2026-03-18">18 mars 2026</time></div><h2 class="blog-title"><a href="/fr/blog/article-1.html">Structurer un programme SEO adapt&eacute; &agrave; l'IA</a></h2><p class="blog-excerpt">Un mod&egrave;le pratique pour relier intention, base technique et coh&eacute;rence editoriale.</p></div></article><article class="blog-card reveal" data-blog-card data-category="paid-m&eacute;dias" data-search="funnels google ads qui prot&egrave;gent la marge concevoir l'acquisition paid autour de l'intention, de l'economie et du post-clic. m&eacute;dias payants"><a href="/fr/blog/article-2.html"><div class="blog-image"><img src="/assets/images/blog-2.svg" alt="Funnels Google Ads qui prot&egrave;gent la marge" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Media payants</span><time datetime="2026-03-09">9 mars 2026</time></div><h2 class="blog-title"><a href="/fr/blog/article-2.html">Funnels Google Ads qui prot&egrave;gent la marge</a></h2><p class="blog-excerpt">Concevoir l'acquisition payante autour de l'intention, de l'&eacute;conomie et du post-clic.</p></div></article><article class="blog-card reveal" data-blog-card data-category="automatisation" data-search="blueprints d'automatisation pour &eacute;quipes b2b l'automatisation lifecycle doit suivre la progression reelle des acheteurs. automatisation"><a href="/fr/blog/article-3.html"><div class="blog-image"><img src="/assets/images/blog-3.svg" alt="Plans d'automatisation pour &eacute;quipes B2B" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Automatisation</span><time datetime="2026-02-27">27 f&eacute;vrier 2026</time></div><h2 class="blog-title"><a href="/fr/blog/article-3.html">Plans d'automatisation pour &eacute;quipes B2B</a></h2><p class="blog-excerpt">L'automatisation du cycle de vie doit suivre la progression r&eacute;elle des acheteurs.</p></div></article><article class="blog-card reveal" data-blog-card data-category="strategy" data-search="du trafic au revenu: architecture de mesure construire un reporting oriente decision, pas seulement dashboard. strat&eacute;gie"><a href="/fr/blog/article-4.html"><div class="blog-image"><img src="/assets/images/blog-4.svg" alt="Du trafic au revenu: architecture de mesure" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Strat&eacute;gie</span><time datetime="2026-02-14">14 f&eacute;vrier 2026</time></div><h2 class="blog-title"><a href="/fr/blog/article-4.html">Du trafic au revenu: architecture de mesure</a></h2><p class="blog-excerpt">Construire un reporting orient&eacute; d&eacute;cision, pas seulement des dashboards.</p></div></article>
+    <article class="blog-card reveal" data-blog-card data-category="seo" data-search="structurer un programme seo adapte a l'ia un mod&egrave;le pratique pour relier intention, base technique et coh&eacute;rence editoriale. seo"><a href="fr/blog/article-1.html"><div class="blog-image"><img src="assets/images/blog-1.svg" alt="Structurer un programme SEO adapt&eacute; &agrave; l'IA" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">SEO</span><time datetime="2026-03-18">18 mars 2026</time></div><h2 class="blog-title"><a href="fr/blog/article-1.html">Structurer un programme SEO adapt&eacute; &agrave; l'IA</a></h2><p class="blog-excerpt">Un mod&egrave;le pratique pour relier intention, base technique et coh&eacute;rence editoriale.</p></div></article><article class="blog-card reveal" data-blog-card data-category="paid-m&eacute;dias" data-search="funnels google ads qui prot&egrave;gent la marge concevoir l'acquisition paid autour de l'intention, de l'economie et du post-clic. m&eacute;dias payants"><a href="fr/blog/article-2.html"><div class="blog-image"><img src="assets/images/blog-2.svg" alt="Funnels Google Ads qui prot&egrave;gent la marge" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Media payants</span><time datetime="2026-03-09">9 mars 2026</time></div><h2 class="blog-title"><a href="fr/blog/article-2.html">Funnels Google Ads qui prot&egrave;gent la marge</a></h2><p class="blog-excerpt">Concevoir l'acquisition payante autour de l'intention, de l'&eacute;conomie et du post-clic.</p></div></article><article class="blog-card reveal" data-blog-card data-category="automatisation" data-search="blueprints d'automatisation pour &eacute;quipes b2b l'automatisation lifecycle doit suivre la progression reelle des acheteurs. automatisation"><a href="fr/blog/article-3.html"><div class="blog-image"><img src="assets/images/blog-3.svg" alt="Plans d'automatisation pour &eacute;quipes B2B" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Automatisation</span><time datetime="2026-02-27">27 f&eacute;vrier 2026</time></div><h2 class="blog-title"><a href="fr/blog/article-3.html">Plans d'automatisation pour &eacute;quipes B2B</a></h2><p class="blog-excerpt">L'automatisation du cycle de vie doit suivre la progression r&eacute;elle des acheteurs.</p></div></article><article class="blog-card reveal" data-blog-card data-category="strategy" data-search="du trafic au revenu: architecture de mesure construire un reporting oriente decision, pas seulement dashboard. strat&eacute;gie"><a href="fr/blog/article-4.html"><div class="blog-image"><img src="assets/images/blog-4.svg" alt="Du trafic au revenu: architecture de mesure" loading="lazy"></div></a><div class="blog-body"><div class="blog-meta"><span class="tag">Strat&eacute;gie</span><time datetime="2026-02-14">14 f&eacute;vrier 2026</time></div><h2 class="blog-title"><a href="fr/blog/article-4.html">Du trafic au revenu: architecture de mesure</a></h2><p class="blog-excerpt">Construire un reporting orient&eacute; d&eacute;cision, pas seulement des dashboards.</p></div></article>
   </div>
   <p class="empty-state" data-blog-empty hidden>Aucun article ne correspond &agrave; ce filtre.</p>
 </div></section></main>
@@ -102,8 +116,8 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a class="site-brand site-brand--footer" href="/fr/index.html" aria-label="NextSolution365">
-        <img class="site-brand__logo" src="/assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
+      <a class="site-brand site-brand--footer" href="fr/index.html" aria-label="NextSolution365">
+        <img class="site-brand__logo" src="assets/icons/favicon.svg" alt="NextSolution365 logo" width="40" height="40">
         <span class="site-brand__text">
           <span class="site-brand__name">NextSolution365</span>
           <span class="site-brand__tagline">Agence de croissance digitale</span>
@@ -114,10 +128,10 @@
     <div class="footer-col">
       <h3>Liens rapides</h3>
       <ul>
-        <li><a href="/fr/services.html">Services</a></li>
-        <li><a href="/fr/consultation.html">Consultation</a></li>
-        <li><a href="/fr/blog.html">Blog</a></li>
-        <li><a href="/fr/contact.html">Contact</a></li>
+        <li><a href="fr/services.html">Services</a></li>
+        <li><a href="fr/consultation.html">Consultation</a></li>
+        <li><a href="fr/blog.html">Blog</a></li>
+        <li><a href="fr/contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -137,14 +151,15 @@
     <span>&copy; <span data-year></span> NextSolution365. Tous droits r&eacute;serv&eacute;s.</span>
     
 <div class="lang-switch" aria-label="Language selector">
-  <a data-lang-link="en" href="/en/index.html">EN</a>
-  <a data-lang-link="fr" href="/fr/index.html">FR</a>
-  <a data-lang-link="es" href="/es/index.html">ES</a>
+  <a data-lang-link="en" href="en/index.html">EN</a>
+  <a data-lang-link="fr" href="fr/index.html">FR</a>
+  <a data-lang-link="es" href="es/index.html">ES</a>
 </div>
   </div>
 </footer>
 </body>
 </html>
+
 
 
 
