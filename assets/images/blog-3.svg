@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Automation workflows abstract">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#082246"/>
+      <stop offset="50%" stop-color="#0f79ff"/>
+      <stop offset="100%" stop-color="#19d5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+  <g fill="rgba(255,255,255,0.2)">
+    <rect x="160" y="180" width="220" height="120" rx="18"/>
+    <rect x="490" y="130" width="220" height="120" rx="18"/>
+    <rect x="820" y="200" width="220" height="120" rx="18"/>
+    <rect x="490" y="390" width="220" height="120" rx="18"/>
+  </g>
+  <g stroke="rgba(255,255,255,0.75)" stroke-width="8" fill="none">
+    <path d="M380 240h110"/>
+    <path d="M710 190h110"/>
+    <path d="M600 250v140"/>
+    <path d="M710 450h110"/>
+  </g>
+  <text x="158" y="560" font-family="Arial, sans-serif" font-size="58" fill="white" opacity="0.9">Automation</text>
+</svg>

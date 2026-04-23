@@ -1,0 +1,19 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Growth analytics abstract">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a2143"/>
+      <stop offset="55%" stop-color="#105dbd"/>
+      <stop offset="100%" stop-color="#1ac4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg4)"/>
+  <rect x="140" y="140" width="920" height="400" rx="28" fill="rgba(255,255,255,0.14)"/>
+  <polyline points="210,460 360,390 500,410 660,310 840,250 990,200" fill="none" stroke="rgba(255,255,255,0.86)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="210" cy="460" r="10" fill="#ffffff"/>
+  <circle cx="360" cy="390" r="10" fill="#ffffff"/>
+  <circle cx="500" cy="410" r="10" fill="#ffffff"/>
+  <circle cx="660" cy="310" r="10" fill="#ffffff"/>
+  <circle cx="840" cy="250" r="10" fill="#ffffff"/>
+  <circle cx="990" cy="200" r="10" fill="#ffffff"/>
+  <text x="166" y="590" font-family="Arial, sans-serif" font-size="58" fill="white" opacity="0.9">Growth</text>
+</svg>

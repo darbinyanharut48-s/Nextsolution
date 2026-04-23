@@ -1,0 +1,9 @@
+2026/04/22-15:55:03.969 22f8 Reusing MANIFEST C:\Users\Darbinyan\Desktop\NextSolucion.com\.edge-tmp\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/04/22-15:55:03.971 22f8 Recovering log #9
+2026/04/22-15:55:03.972 22f8 Reusing old log C:\Users\Darbinyan\Desktop\NextSolucion.com\.edge-tmp\Default\EdgeCoupons/coupons_data.db/000009.log 
+2026/04/22-15:55:03.980 2650 Compacting 4@0 + 0@1 files
+2026/04/22-15:55:04.000 2650 Generated table #12@0: 1 keys, 682072 bytes
+2026/04/22-15:55:04.000 2650 Compacted 4@0 + 0@1 files => 682072 bytes
+2026/04/22-15:55:04.004 2650 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/22-15:55:04.080 2650 Level-0 table #14: started
+2026/04/22-15:55:04.088 2650 Level-0 table #14: 682292 bytes OK
